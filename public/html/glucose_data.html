@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blood Glucose Data</title>
+        <link rel="stylesheet" href="./master.css">
+    </head>
+    <body>
+        <header class="toolbar page_margins">
+            <!---------------------- TEMPORARY ELEMENT, REPLACE ONCE APP.JS IS SETUP ---------------------->
+            <p class="toolbar_logo">Insulin Buddy</p>
+
+            <div class="toolbar_buttons_div desktop_design">
+                <object data="./icons/noatt_noun-user-1935355.svg"></object>
+                <p>Log in</p>
+                <object data="./icons/noatt_noun-notes-4697529.svg"></object>
+                <p>Dashboard</p>
+    
+                <object data="./icons/noatt_noun-leaderboard-3388492.svg"></object>
+                <p>Leaderboard</p>
+    
+                <p class="toolbar_text">
+                    About diabetes
+                </p>
+    
+                <p class="toolbar_text">
+                    About this website
+                </p>
+            </div>
+    
+            <!-- DROP-DOWN MENU FOR MOBILE-->
+            <div class="toolbar_hamburger phone_design">
+                <object data="./icons/sidebar-icon.svg"></object>
+                <ul class="menu">
+                    <li><div id="menu_header">Menu</div></li>
+    
+                    <li><a href="#">
+                            <object data="./icons/noatt_noun-user-1935355.svg"></object>
+                            <p class="menu_item_text">Log in</p>
+                        </a></li>
+    
+                    <li><a href="#">
+                            <object data="./icons/noatt_noun-notes-4697529.svg"></object>
+                            <p class="menu_item_text">Dashboard</p>
+                        </a></li>
+    
+                    <li><a href="#">
+                            <object data="./icons/noatt_noun-leaderboard-3388492.svg"></object>
+                            <p class="menu_item_text">Leaderboard</p>
+                        </a></li>
+    
+                    <li><a href="#">
+                            <p class="menu_item_text">About diabetes</p>
+                        </a></li>
+    
+                    <li><a href="#">
+                            <p class="menu_item_text">About this website</p>
+                        </a></li>
+    
+                    <li><a href="#">
+                            <p class="menu_item_text">Log out</p>
+                        </a></li>
+                </ul>
+            </div>
+
+            <!---------------------- TEMPORARY ELEMENT, REPLACE ONCE APP.JS IS SETUP ---------------------->
+        </header>
+        <main class="page_margins">
+            <h1>Blood Glucose Level History</h1>
+
+            <button class="btn btn-colour-primary btn_big" id="btn_add_data">
+                <a href="#">Add Data</a>
+            </button>
+
+            <div class="data_select" id="data_selectTop">
+                <p><</p>
+                <p>1-10 of 30</p>
+                <p>></p>
+            </div>
+
+            <table class="data_viewing_table">
+                <thead>
+                    <tr class="tableHeader table_corner_top_left table_corner_top_right">
+                        <th class="table_corner_top_left table_rank">Date</th>
+                        <th>Fast</th>
+                        <th class="table_corner_top_right">nmol/L</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>22/03/22 9:45pm</td>
+                        <td>Yes</td>
+                        <td>4.9</td>
+                        <td class="comment_column">
+                            <img src=".\icons\comment_icon.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>22/03/22 9:45pm</td>
+                        <td>No</td>
+                        <td>12.6</td>
+                        <td class="comment_column">
+                            <img src=".\icons\comment_icon.png">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="data_select" id="data_selectBottom">
+                <p><</p>
+                <p>1-10 of 30</p>
+                <p>></p>
+            </div>
+        </main>
+        <footer class="footer">
+            <!---------------------- TEMPORARY ELEMENT, REPLACE ONCE APP.JS IS SETUP ---------------------->
+            <p class ="footer_text">
+                Website design (c) Aryan Shahi, Jiachen Si, Melana Uceda, Kevin Zhao, and Annie Zhu
+            </p>
+    
+            <p class="toolbar_logo">
+                Insulin Buddy
+            </p>
+    
+            <p class = "footer_text">
+                In an emergency, dial 000
+            </p>
+            <!---------------------- TEMPORARY ELEMENT, REPLACE ONCE APP.JS IS SETUP ---------------------->
+        </footer>
+        
+
+    </body>
+</html>

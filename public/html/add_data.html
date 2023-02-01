@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data</title>
+    <link rel="stylesheet" href="./master.css">
+</head>
+
+<body class="page_margins">
+    <h1 class="enterDataHeading">Enter Your Blood Glucose Level</h1>
+
+    <label> Were you fasting?</label><br>
+
+    <a href="#">
+        <div>
+            <button class="btn-colour-primary-tint">
+                <a href="#">Yes</a>
+            </button>
+        
+            <button class="btn-colour-primary-tint">
+                <a href="#">No</a>
+            </button>
+        </div>
+    </a>
+    
+    <form>
+        <label for="bloodGlucose">Blood Glucose Level (nmol/L)</label><br>
+        <input type="text" id="bloodGlucose" name="bloodGlucose" value="Enter your data here" ><br>
+
+        <label for="comment">Comment</label><br>
+        <textarea name="comment" rows="10" cols="30">
+        Enter your text here
+        </textarea>
+        <a href="#">
+            <button class="btn btn-colour-primary btn_big" >Submit</button>
+        </a>
+    </form>
+
+    <a href="#">
+        <div>
+            <button class="btn btn-with-border btn_big" >Back</button>
+        </div>
+    </a>
+    
+</body>
+</html>

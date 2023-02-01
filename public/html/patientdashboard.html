@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melana Uceda">
+    <title>Patient Dashboard</title>
+
+    <link rel="stylesheet" href="./master.css">
+
+</head>
+<body class="page_margins">
+    <h1 id="patient_dash_header">Welcome, [Patient Name]!</h1>
+
+    <div class="cluster">
+        <div class="cluster_block speech_maxwidth extra_margin margin_bottom">
+            <h2>Your daily measurements</h2>
+            <a href="#">
+                <div class="flex_group">
+                    <div class="tick_box"></div>
+                    <div class="btn btn-dashboard flex_group btn-colour-primary-tint">
+                        Insulin dose
+                        <object data="./icons/noatt_noun-needle-1001286.svg"></object>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="flex_group">
+                    <div class="tick_box"></div>
+                    <div class="btn btn-dashboard flex_group btn-colour-primary-tint">
+                        Blood Glucose
+                        <object data="./icons/notatt_noun-glucometer-2450269.svg"></object>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="flex_group">
+                    <div class="tick_box tick_box_complete">
+                        <object data="./icons/tick.svg"></object>
+                    </div>
+                    <div class="btn btn-dashboard flex_group btn-colour-primary-dash">
+                        Weight
+                        <object data="./icons/noatt_noun-weight-3203522.svg"></object>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="flex_group">
+                    <div class="tick_box"></div>
+                    <div class="btn btn-dashboard flex_group btn-colour-primary-tint">
+                        Exercise
+                        <object data="./icons/noatt_noun-steps-3552864.svg"></object>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="cluster_block speech_maxwidth no_margin">
+            <h2>A message for you</h2>
+            <div>
+                <div class="speech_bubble">
+                    <h3>From Doctor Aname 10:36 22/03/2022</h3>
+                    <p>Hey Joe! Your most recent blood glucose measurement was great! Keep at it.</p>
+                </div>
+                <object class="speech_bubble_point" data="./icons/speechbubblepoint.svg"></object>
+            </div>
+        </div>
+    </div>
+
+    <div class="leaderboard_responsive speech_maxwidth center_leaderboard">
+        <h2>Leaderboard</h2>
+        <table class="leaderboard">
+            <tr class="table_corner_top_left table_corner_top_right">
+            <td class="table_rank table_corner_top_left">[rank]</td>
+            <td>[username]</td>
+            <td class="table_percent table_corner_top_right">[#]% ></td>
+            </tr>
+            <tr>
+                <td class="table_rank">[rank]</td>
+                <td>[username]</td>
+                <td class="table_percent">[#]% ></td>
+            </tr>
+            <tr>
+                <td class="table_rank">[rank]</td>
+                <td>[username]</td>
+                <td class="table_percent">[#]% ></td>
+            </tr>
+        </table>
+
+        <table class="current_user">
+            <tr class="highlighted_user table_corner_bottom_left table_corner_bottom_right">
+                <td class="table_rank table_corner_bottom_left">[rank]</td>
+                <td>[current user username]</td>
+                <td class="table_percent table_corner_bottom_right">[#]% ></td>
+            </tr>
+        </table>
+        <a href="#"><h3 class="text_under_table">See full leaderboard ></h3></a>
+    </div>
+
+</body>
+</html>

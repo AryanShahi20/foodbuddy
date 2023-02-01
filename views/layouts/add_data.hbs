@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta nam="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="/css/front_end.js"></script>
+    <title>Add Data</title>
+</head>
+<body>
+    {{> header}}
+    <main class="page_margins background">
+        <h1>{{header}}</h1>
+        
+        {{#each flash}}
+            <p class="alert">{{this}}</p>
+        {{/each}}
+        <br>
+
+        <form action="." method="POST" class="add_data_form center_via_margin speech_maxwidth">
+            {{!-- Won't render anything if the rendered file is empty --}}
+            <label for="{{name}}">{{data_label}}</label>
+            <input type="text" id="{{name}}" name="field" class="margin_bottom_m">
+
+            <label for="comment">Comment</label>
+            <textarea name="comment" rows="10" cols="30"></textarea>
+            <a href=".">
+                <button class="btn btn-colour-primary btn_big" id="update_btn">
+                    Submit    
+                </button>
+            </a>
+        </form>
+
+        <div>
+            {{> partial_back_button address="."}}
+        </div>
+    </main>
+    <div style="flex-grow:1"></div>
+    {{> footer}}
+</body>
+</html>

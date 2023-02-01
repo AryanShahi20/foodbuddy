@@ -1,0 +1,48 @@
+<h1>Clinical Notes for {{{patient_name}}}</h1>
+
+    <div class="flex_group clinician_text flex_around">
+        <div class="width90">
+
+            <div class="flex_group margin_5 top_margin">
+                <h3 class="margin_5 color_white">Your clinical observations</h3>
+                <div class="flex_group">
+                    <p><a href="left">{{arrows.left}}</a></p>
+                    <p>{{curr_page}} of {{total_pages}}</p>
+                    <p><a href="right">{{arrows.right}}</a></p>
+                </div>
+            </div>
+
+            <table class="data_viewing_table">
+                <thead>
+                    <tr class="tableHeader table_corner_top_left table_corner_top_right">
+                        <th class="table_corner_top_left">
+
+                            <div class="row_header">Date</div>
+                        </th>
+                        <th class="table_corner_top_right comments_width">
+                            <div>Comment</div>
+                        </th>
+                    </tr>
+                </thead>
+                <div class="table_white">
+                    {{#each entries}}
+                    <tr>
+                        <td>{{this.date}}</td>
+                        <td class="comments_width">{{this.comment}}</td>
+                    </tr>
+                    {{/each}}
+                </div>
+                
+            </table>
+            <div class="flex_group center_text top_bottom_margin">
+                    <p><a href="left">{{arrows.left}}</a></p>
+                    <p>{{curr_page}} of {{total_pages}}</p>
+                    <p><a href="right">{{arrows.right}}</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+            {{> partial_back_button address="."}}
+    </div>

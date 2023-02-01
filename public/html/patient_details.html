@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <header class="toolbar page_margins">
+        <p class="toolbar_logo">Insulin Buddy</p>
+
+        <div class="toolbar_buttons_div desktop_design">
+            <a href="/">
+                <object
+                    data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6i-e43aba7c-89fb-4337-9073-aef77441205c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2aS1lNDNhYmE3Yy04OWZiLTQzMzctOTA3My1hZWY3NzQ0MTIwNWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rnGcVPZJ4EE2OuyKKDdI2rWjc96xqHVfLbBZ9uC-H7Y"></object>
+                <p>Log in</p>
+            </a>
+            <!-- This option shouldn't be available until the user has logged in -->
+            <a href="#">
+                <object
+                    data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6o-6b277ada-dc7a-42cd-a662-13db0c31ae2a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2by02YjI3N2FkYS1kYzdhLTQyY2QtYTY2Mi0xM2RiMGMzMWFlMmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ArCutlkMjVVJlf7GUiT6wihtB9k-84R-z_gQUbsqL8E"></object>
+                <p>Dashboard</p>
+            </a>
+            <!-- This option shouldn't be available until the user has logged in -->
+            <a href="/leaderboard">
+                <object
+                    data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6v-14b588a7-88e5-437d-8776-2960ac3e4132.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2di0xNGI1ODhhNy04OGU1LTQzN2QtODc3Ni0yOTYwYWMzZTQxMzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dOGCcTtIiMXeiznTNU7ISfC81lemdl2FF-i_JV4Ncrw"></object>
+                <p>Leaderboard</p>
+            </a>
+            <a href="/about_diabetes">
+                <p class="toolbar_text">
+                    About diabetes
+                </p>
+            </a>
+            <!-- The class "background" in about_page.html isn't included. I need to talk to the team about this -->
+            <a href="/about">
+                <p class="toolbar_text">
+                    About this website
+                </p>
+            </a>
+        </div>
+
+        <!-- DROP-DOWN MENU FOR MOBILE-->
+        <div class="toolbar_hamburger phone_design">
+            <object
+                data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp7f-6efdb692-e7d5-49ac-9d18-035ab9ddc90a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA3Zi02ZWZkYjY5Mi1lN2Q1LTQ5YWMtOWQxOC0wMzVhYjlkZGM5MGEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pv1dW-YPlVFSzdhb8heNAF7H8tGY6QYXpWkF_YGaNXE"></object>
+            <ul class="menu">
+                <li>
+                    <div id="menu_header">Menu</div>
+                </li>
+
+                <li><a href="/">
+                        <object
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6i-e43aba7c-89fb-4337-9073-aef77441205c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2aS1lNDNhYmE3Yy04OWZiLTQzMzctOTA3My1hZWY3NzQ0MTIwNWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rnGcVPZJ4EE2OuyKKDdI2rWjc96xqHVfLbBZ9uC-H7Yg"></object>
+                        <p class="menu_item_text">Log in</p>
+                    </a></li>
+
+                <li><a href="#">
+                        <object
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6o-6b277ada-dc7a-42cd-a662-13db0c31ae2a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2by02YjI3N2FkYS1kYzdhLTQyY2QtYTY2Mi0xM2RiMGMzMWFlMmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ArCutlkMjVVJlf7GUiT6wihtB9k-84R-z_gQUbsqL8E"></object>
+                        <p class="menu_item_text">Dashboard</p>
+                    </a></li>
+
+                <li><a href="#">
+                        <object
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6v-14b588a7-88e5-437d-8776-2960ac3e4132.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2di0xNGI1ODhhNy04OGU1LTQzN2QtODc3Ni0yOTYwYWMzZTQxMzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dOGCcTtIiMXeiznTNU7ISfC81lemdl2FF-i_JV4Ncrw"></object>
+                        <p class="menu_item_text">Leaderboard</p>
+                    </a></li>
+
+                <li><a href="#">
+                        <p class="menu_item_text">About diabetes</p>
+                    </a></li>
+
+                <li><a href="/about">
+                        <p class="menu_item_text">About this website</p>
+                    </a></li>
+
+                <li><a href="/">
+                        <p class="menu_item_text">Log out</p>
+                    </a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="page_margins">
+        <h1 class="PageHeading">Patient Name</h1>
+        <div class="flex_group clinician_text margin_bottom">
+            <div class="width75">
+
+                <div class="flex_group margin_5">
+                    <div class="flex_group">
+                        <img
+                            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df57uyu-ec72f19b-6a23-4f68-88f8-dff25d4888e4.png/v1/fill/w_910,h_878,strp/noatt_noun_calendar_2080402_by_thems0kitty_df57uyu-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTIzNSIsInBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY1N3V5dS1lYzcyZjE5Yi02YTIzLTRmNjgtODhmOC1kZmYyNWQ0ODg4ZTQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.3Nc52Cr0ecz4BxU76DtquVpXuNGLy05LNl3e7hO5t4A">
+                        <h2 class="margin_5">Refine Search</h2>
+                    </div>
+                    <div class="flex_group">
+                        <p><a href="left">{{arrows.left}}</a></p>
+                        <p>{{curr_page}} of {{total_pages}}</p>
+                        <p><a href="right">{{arrows.right}}</a></p>
+                    </div>
+                </div>
+
+                <table class="data_viewing_table top_bottom_margin">
+                    <thead>
+                        <tr class="tableHeader table_corner_top_left table_corner_top_right">
+                            <th class="table_corner_top_left">
+                                <div class="row_header">Date</div>
+                            </th>
+                            <th>
+                                <div class="row_header">
+                                    <div class="row_image">
+                                        <object
+                                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6r-135ec83f-52fa-4448-91c1-7c6983479b4d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2ci0xMzVlYzgzZi01MmZhLTQ0NDgtOTFjMS03YzY5ODM0NzliNGQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.C8fZTpyvrY1NHTMgOkWBbC2B0UL9BrYoaOLj6AaG_ls"></object>
+                                    </div>
+                                    <div>
+                                        Insulin Doses
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="row_header">
+                                    <div class="row_image">
+                                        <object
+                                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6a-9238d58d-16f8-4006-835c-25f38fb1f0e4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2YS05MjM4ZDU4ZC0xNmY4LTQwMDYtODM1Yy0yNWYzOGZiMWYwZTQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dS51DPwQN5g3NY7SsCfuZAcGV6bUW1W-6PdfV2FVtUg"></object>
+                                    </div>
+                                    <div>
+                                        Blood Glucose (nmol/L)
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="row_header">
+                                    <div class="row_image">
+                                        <object
+                                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6e-70958146-bc3f-41b6-9115-c89a1504aab4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2ZS03MDk1ODE0Ni1iYzNmLTQxYjYtOTExNS1jODlhMTUwNGFhYjQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.5jOroSM0WUbHGyuOlfaSZQL8BAqbZaa8mM5b7a5vIPs"></object>
+                                    </div>
+                                    <div>
+                                        Weight (kg)
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="table_corner_top_right">
+                                <div class="row_image">
+                                    <object
+                                        data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6m-e1878a25-6d84-41be-ab3b-121d6c25549d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2bS1lMTg3OGEyNS02ZDg0LTQxYmUtYWIzYi0xMjFkNmMyNTU0OWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.N3jeNUbWsdyOkXfPTN_apFFCqwb0ho0pcAOinaoVII4"></object>
+                                </div>
+                                <div>
+                                    Exercise (Steps)
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <!--{{{tbody}}}-->
+                    <tr>
+                        <!--All the "data" in here is random, apart from the comment column. 
+                        You'd want to have the same kind of styling that occurs in the clinician dashboard.-->
+                        <td class="table_rank">[rank]</td>
+                        <td>[username]</td>
+                        <td>[username]</td>
+                        <td>[username]</td>
+                        <td class="table_percent">[#]% ></td>
+                        <td class="comment_column">
+                            <img
+                                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp73-09840a0f-cfa2-4f06-b6fd-bfd993995d87.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA3My0wOTg0MGEwZi1jZmEyLTRmMDYtYjZmZC1iZmQ5OTM5OTVkODcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kcJlPH9NHI3BbR3H6K5xGGioIjtUEBJLZ78iauBaHRE">
+                        </td>
+                    </tr>
+
+                </table>
+                <div class="flex_group center_text top_bottom_margin">
+                    <p><a href="left">{{arrows.left}}</a></p>
+                    <p>{{curr_page}} of {{total_pages}}</p>
+                    <p><a href="right">{{arrows.right}}</a></p>
+                </div>
+            </div>
+
+            <div class="patient_features">
+
+                <div class="comment_container margin_bottom_s">
+
+                    <h2 class="center_text">Add a clinicial note</h2>
+
+                    <div>
+                        <form class="speech_bubble speech_bubble_contrast about_speech_bubble">
+                            <p class="grey_text">Write a note about your patient's wellbeing today!</p>
+                        </form>
+                        <object class="speech_bubble_point margin_bottom_s"
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp79-19039e4b-02fd-4450-89da-f1732b6526b9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA3OS0xOTAzOWU0Yi0wMmZkLTQ0NTAtODlkYS1mMTczMmI2NTI2YjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.buCvMy8w2anRVGwUrIVu_yF1wELAq57eiKgBgqP_m5A"></object>
+                    </div>
+
+                    <!--Needs to be enabled/disabled depending on form status-->
+                    <button class="btn btn-colour-primary no_margin margin_bottom_s">
+                        <a href="#">Submit</a>
+                    </button>
+
+                    <a href="#">
+                        <h3>See previous clinical notes</h3>
+                    </a>
+                </div>
+
+                <div class="comment_container margin_bottom_s">
+
+                    <h2 class="center_text">Send a support message</h2>
+
+                    <div>
+                        <form class="speech_bubble speech_bubble_contrast about_speech_bubble">
+                            <p class="grey_text">Write your patient an encouraging message!</p>
+                        </form>
+                        <object class="speech_bubble_point margin_bottom_s"
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp79-19039e4b-02fd-4450-89da-f1732b6526b9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA3OS0xOTAzOWU0Yi0wMmZkLTQ0NTAtODlkYS1mMTczMmI2NTI2YjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.buCvMy8w2anRVGwUrIVu_yF1wELAq57eiKgBgqP_m5A"></object>
+                    </div>
+
+                    <!--Needs to be enabled/disabled depending on form status-->
+                    <button class="btn btn-colour-primary no_margin">
+                        <a href="#">Send</a>
+                    </button>
+                </div>
+
+                <!--patient data thresholds when form is inactive-->
+                <div class="comment_container margin_bottom_s">
+
+                    <h2 class="center_text">"Healthy" patient data thresholds</h2>
+
+                    <p class="threshold_text margin_bottom_s">
+                        <span class="bold">Insulin doses (per day):</span> 1 per day</br>
+                        <span class="bold">Blood glucose max/min (nmol/L):</span> 7.0 / 10.0</br>
+                        <span class="bold">Weight (kg):</span> 85</br>
+                        <span class="bold">Exercise (steps):</span> 3,000 / 20,000
+                    </p>
+
+                    <!--Needs to be enabled/disabled depending on form status-->
+                    <button class="btn btn-colour-primary no_margin">
+                        <a href="#">Edit</a> <!--this leads to the active form-->
+                    </button>
+                </div>
+
+                <!--patient data thresholds when form is active-->
+                <div class="comment_container margin_bottom_s">
+
+                    <h2 class="center_text">"Healthy" patient data thresholds</h2>
+
+                    <p class="threshold_text margin_bottom_s">
+                        <div class="cluster threshold_line margin_bottom_s">
+                            <div class="bold">Insulin doses (per day):</div>
+                            <form class="form_white">1</form>
+                        </div>
+
+                        <div class="cluster threshold_line margin_bottom_s">
+                            <div class="bold">Blood glucose min/max (nmol/L):</div>
+                            <form class="form_white">7.0</form>
+                            <span> / </span>
+                            <form class="form_white">8.0</form>
+                        </div>
+
+                        <div class="cluster threshold_line margin_bottom_s">
+                            <div class="bold">Weight (kg):</div>
+                            <form class="form_white">85</form>
+                        </div>
+
+                        <div class="cluster threshold_line margin_bottom_s">
+                            <div class="bold">Exercise min/max (steps):</div>
+                            <form class="form_white">3000</form>
+                            <span>/</span>
+                            <form class="form_white">20000</form>
+                        </div>
+                    </p>
+
+                    <!--Needs to be enabled/disabled depending on form status-->
+                    <button class="btn btn-colour-primary no_margin">
+                        <a href="#">Update</a>
+                    </button>
+                </div>
+
+                <button class="btn btn-colour-primary btn_big">
+                    <a href="#">Edit patient name</a>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer_text">
+            Website design (c) Aryan Shahi, Jiachen Si, Melana Uceda, Kevin Zhao, and Annie Zhu
+        </p>
+
+        <p class="toolbar_logo">
+            Insulin Buddy
+        </p>
+
+        <p class="footer_text">
+            In an emergency, dial 000
+        </p>
+    </footer>
+</body>
+
+</html>

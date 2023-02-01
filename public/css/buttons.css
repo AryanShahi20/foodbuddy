@@ -1,0 +1,154 @@
+button, .btn {
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: var(--spacing-s);
+    border-radius: 100px;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-width: 152px;
+    font-family: var(--font-body);
+    font-size: var(--text-mobile body);
+    color: var(--colour-main-text);
+    margin: 10px auto;
+    box-shadow: var(--drop-shadow);
+  }
+
+.btn_big {
+    width: 315px;
+    font-size: var(--text-desktop-data);
+    margin: 10px auto;
+}
+
+.btn-colour-primary, .btn-colour-secondary:hover, .btn-with-border:hover {
+    background-color: var(--colour-primary);
+    color: var(--colour-contrast-text);
+}
+
+.btn-colour-primary:disabled, .btn-colour-primary-tint {
+    background-color: var(--colour-primary-tint);
+    color: var(--colour-main-text);
+}
+
+.btn-colour-primary-dash {
+    background-color: var(--colour-primary);
+}
+
+.btn-colour-secondary, .btn-colour-primary:hover, .btn-colour-primary-dash:hover {
+    background-color: var(--colour-secondary);
+    color: var(--colour-main-text);
+}
+
+.btn-colour-secondary:disabled, .btn-colour-primary-tint:hover {
+    background-color: var(--colour-secondary-tint);
+}
+
+.btn-with-border {
+    background-color: var(--colour-contrast-text);
+    border: var(--colour-primary) 2px solid;
+}
+
+.btn-colour-primary:active, .btn-colour-primary-dash:active {
+    border: var(--colour-primary) 2px solid;
+}
+
+.btn-colour-secondary:active, .btn-with-border:active {
+    border: var(--colour-secondary) 2px solid;
+}
+
+/* Style specific to viewing data */
+#btn_add_data {
+    margin: 0px auto;
+    margin-bottom: var(--spacing-l);
+}
+
+#btn_back {
+    margin: 0px auto;
+    margin-top: var(--spacing-l);
+    margin-bottom: var(--spacing-l);
+}
+
+.btn-dashboard {
+    width: 100%;
+    /*min-width: 315px;
+    max-width: 100%;*/
+    font-size: var(--text-bigbutton);
+    border-radius: 18px;
+    justify-content: space-between;
+}
+
+
+
+
+/* Speech bubbles (make sure to pick right colour svg) */
+.speech_bubble {
+    width: 100%;
+    max-width: 560px;
+    background-color: var(--colour-secondary);
+    border-radius: 25px;
+    box-shadow: var(--drop-shadow);
+    padding: var(--spacing-s);
+    z-index: 1;
+}
+
+.speech_bubble p {
+    margin: 0;
+}
+
+/* Speech bubble point on right side of text box */
+.speech_bubble_point {
+    z-index: 2;
+    filter: drop-shadow(3px 3px rgba(0, 0, 0, 0.05));
+    margin: -2px 0 0 75%;
+    width: 45px;
+    height: auto;
+}
+
+/* Speech bubble point on left side of text box */
+.speech_bubble_point_variant {
+    margin: -2px 85% var(--spacing-s) 15%;
+    transform: scaleX(-1);
+}
+
+.speech_bubble_contrast {
+    background-color: var(--colour-contrast-text);
+}
+
+.speech_maxwidth {
+    min-width: 305px;
+    max-width: 560px;
+}
+
+/* Fixes to about page weirdness */ 
+.about_speech_bubble {
+    max-width: none;
+    
+}
+.about_speech_bubble p, .about_speech_bubble h3 {
+    margin:5px;
+    font-size: 10px;
+}
+.about_speech_maxwidth {
+    width: auto;
+    max-width: none;
+}
+
+
+
+.no_margin {
+    margin: 0;
+}
+
+.margin_bottom_s {
+    margin-bottom: var(--spacing-s);
+}
+
+.margin_bottom {
+    margin-bottom: var(--spacing-xl);
+}
+
+.margin_right {
+    margin-right: 10px;
+}

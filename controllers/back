@@ -1,0 +1,160 @@
+const Insulin_Dose = require('../models/insulin_dose')
+const Blood_Glucose_Level = require('../models/blood_glucose_level')
+const Weight = require('../models/weight')
+const Exercise = require('../models/exercise')
+const Patient_Record = require('../models/patient')
+
+var curr_page = 1
+const MAX_RECORDS_ON_PAGE = 10;
+var MAX_PAGES = 30
+var left_arrow_active = false
+var right_arrow_active = true
+
+const clinicianDashboard = (req, res) => {
+    res.render('clinician/clinician_dashboard', {title: "Clinician Dashboard"})
+}
+
+const getPatientHealthRecords = async (req, res, next) => {
+    try {
+        const insulin_record = await Insulin_Dose.find().lean()
+        const exercise_record = await Exercise.find().lean()
+        const weight_record = await Weight.find().lean()
+        const blood_glucose_level_record = await Blood_Glucose_Level.find().lean()
+        
+        
+        MAX_PAGES = Math.floor(await Insulin_Dose.count() / MAX_RECORDS_ON_PAGE) + 1
+
+        // Next page button
+        let records_from_index = (curr_page-1) * MAX_RECORDS_ON_PAGE
+        let curr_page_table_body = "<tbody>"
+        for (let current_record_index in insulin_record) {
+            // Make sure to only display 10 rows in table
+            if(current_record_index < records_from_index) {
+                continue
+            } else if(current_record_index > records_from_index + MAX_RECORDS_ON_PAGE) {
+                break
+            }
+            // Display a new row
+            
+            let current_insulin_record = insulin_record[current_record_index];
+            let current_weight_record = weight_record[current_record_index];
+            let current_exercise_record = exercise_record[current_record_index];
+            let current_blood_glucose_level_record = blood_glucose_level_record[current_record_index];
+
+            const current_patient = await Patient_Record.findOne({patient_id: current_insulin_record["patient_id"] }).lean()
+            let patient_name = current_patient["given_name"] + " " + current_patient["family_name"];
+
+            // let insulinCritical = Boolean(current_insulin_record["doses"]  > current_patient["thresholds"][1].max
+            // || current_insulin_record["doses"]  < current_patient["thresholds"][1].min);
+
+            // let weightCritical = Boolean(current_weight_record["weight"] > current_patient["thresholds"][0].max
+            // || current_weight_record["weight"] < current_patient["thresholds"][0].min);
+            
+            // let exerciseCritical = Boolean(current_exercise_record["steps"] > current_patient["thresholds"][3].max
+            // || current_exercise_record["steps"] < current_patient["thresholds"][3].min);
+           
+            // let glucoseCritical = Boolean(current_blood_glucose_level_record["nmol_L"]  > current_patient["thresholds"][2].max
+            // || current_blood_glucose_level_record["nmol_L"]  < current_patient["thresholds"][2].min);
+                
+
+            
+            // Put information into columns
+            
+            let row_patient_name = "<td>" + patient_name + "</td>"
+            
+            let row_insulin = ""
+            if (true){//insulinCritical
+                row_insulin = '<td bgcolor="pink">' + current_insulin_record["doses"] + "</td>"
+            } else {
+                row_insulin = "<td>" + current_insulin_record["doses"] + "</td>"
+            }
+            
+
+            let row_blood_glucose_levels = ""
+            if (true){//glucoseCritical
+                row_blood_glucose_levels = '<td bgcolor="pink">' + current_blood_glucose_level_record["nmol_L"] + "</td>"
+            } else {
+                row_blood_glucose_levels = "<td>" + current_blood_glucose_level_record["nmol_L"] + "</td>"
+            }
+            
+
+            let row_weight = ""
+            if (true){//weightCritical
+                row_weight = '<td bgcolor="pink">' + current_weight_record["weight"] + "</td>"
+            } else {
+                row_weight = "<td>" + current_weight_record["weight"] + "</td>"
+            }
+            
+
+            let row_exercise = ""
+            if (true){//exerciseCritical
+                row_exercise = '<td bgcolor="pink">' + current_exercise_record["steps"] + "</td>"
+            } else {
+                row_exercise = "<td>" + current_exercise_record["steps"] + "</td>"
+            }
+
+
+
+            // Put columns into row
+            let new_table_row = "<tr>" + row_patient_name + row_insulin + row_blood_glucose_levels + row_weight + row_exercise + "</tr>"
+
+            // Put row into body
+            curr_page_table_body += new_table_row
+
+        }
+        curr_page_table_body += "</tbody>"
+        res.render('clinician/clinician_dashboard', {
+            curr_page: curr_page,
+            total_pages: MAX_PAGES,
+            arrows:return_arrow_states(),
+            tbody: curr_page_table_body
+        })
+    }
+    catch (err) {
+        return next(err)
+    } 
+}
+
+const check_arrows_active = (req, res) => {
+    let arrow = req.params.arrow
+    if(arrow=="left"){
+        curr_page-=1
+    } else {
+        curr_page+=1
+    }
+    if (curr_page==1) {
+        left_arrow_active = false
+        right_arrow_active = true
+    } else if (curr_page == MAX_PAGES) {
+        left_arrow_active = true
+        right_arrow_active = false
+    } else {
+        left_arrow_active = true
+        right_arrow_active = true
+    }
+    // Refreshes page to update the data.
+    return res.redirect('./')
+}
+
+function return_arrow_states() {
+    let left = ""
+    let right = ""
+    if(left_arrow_active==true){
+        left = "<"
+    }
+    if(right_arrow_active==true){
+        right = ">"
+    }
+    if(MAX_PAGES==1){
+        right = ""
+        right_arrow_active = false   
+    }
+    let arrows = {left:left, right:right}
+    return arrows
+}
+
+module.exports = {
+    clinicianDashboard,
+    getPatientHealthRecords,
+    check_arrows_active
+}

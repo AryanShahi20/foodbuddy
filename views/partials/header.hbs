@@ -1,0 +1,65 @@
+<header class="toolbar page_margins">
+    <a href="/" class="toolbar_logo">Insulin Buddy</a>
+
+    <div class="toolbar_buttons_div desktop_design">
+        {{!-- This option shouldn't be available until the user has logged in --}}
+        <div class="{{{logged_in}}}">
+            <a href="/"> 
+                <object data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6o-6b277ada-dc7a-42cd-a662-13db0c31ae2a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2by02YjI3N2FkYS1kYzdhLTQyY2QtYTY2Mi0xM2RiMGMzMWFlMmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ArCutlkMjVVJlf7GUiT6wihtB9k-84R-z_gQUbsqL8E"></object>
+                <p>Dashboard</p>
+            </a>
+            {{!-- This option shouldn't be available until the user has logged in - should be "log in" instead --}}
+            <a href="/profile">
+                <object data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6i-e43aba7c-89fb-4337-9073-aef77441205c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2aS1lNDNhYmE3Yy04OWZiLTQzMzctOTA3My1hZWY3NzQ0MTIwNWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rnGcVPZJ4EE2OuyKKDdI2rWjc96xqHVfLbBZ9uC-H7Y"></object>
+                <p>My account</p>
+            </a>
+
+            {{!-- This option shouldn't be available until the user has logged in --}}
+            <a class="{{{hide}}}" href="/patient/leaderboard">
+                <object data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6v-14b588a7-88e5-437d-8776-2960ac3e4132.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2di0xNGI1ODhhNy04OGU1LTQzN2QtODc3Ni0yOTYwYWMzZTQxMzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dOGCcTtIiMXeiznTNU7ISfC81lemdl2FF-i_JV4Ncrw"></object>
+                <p>Leaderboard</p>
+            </a>
+        </div>
+        <a href="/about_diabetes">
+            <p class="toolbar_text">
+                About diabetes
+            </p>
+        </a>
+        {{!-- The class "background" in about_page.html isn't included. I need to talk to the team about this --}}
+        <a href="/about">
+            <p class="toolbar_text">
+                About this website
+            </p>
+        </a>
+    </div>
+    <!-- DROP-DOWN MENU FOR MOBILE-->
+    <div class="toolbar_hamburger phone_design">
+        <object data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp7f-6efdb692-e7d5-49ac-9d18-035ab9ddc90a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA3Zi02ZWZkYjY5Mi1lN2Q1LTQ5YWMtOWQxOC0wMzVhYjlkZGM5MGEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pv1dW-YPlVFSzdhb8heNAF7H8tGY6QYXpWkF_YGaNXE"></object>
+        <ul class="menu">
+            <li><div id="menu_header">Menu</div></li>
+            <div class="{{{logged_in}}}">
+                <li><a href="/">
+                    <object data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6o-6b277ada-dc7a-42cd-a662-13db0c31ae2a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2by02YjI3N2FkYS1kYzdhLTQyY2QtYTY2Mi0xM2RiMGMzMWFlMmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ArCutlkMjVVJlf7GUiT6wihtB9k-84R-z_gQUbsqL8E"></object>
+                    <p class="menu_item_text">Dashboard</p>
+                    </a></li>
+
+                <li class="{{{hide}}}"><a href="/patient/leaderboard">
+                    <object data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6v-14b588a7-88e5-437d-8776-2960ac3e4132.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2di0xNGI1ODhhNy04OGU1LTQzN2QtODc3Ni0yOTYwYWMzZTQxMzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dOGCcTtIiMXeiznTNU7ISfC81lemdl2FF-i_JV4Ncrw"></object>
+                    <p class="menu_item_text">Leaderboard</p>
+                </a></li>
+
+                <li><a href="/{{{global.dashboard_route}}}/{{{global.dashboard_route}}}_profile">
+                    <p class="menu_item_text">My account</p>
+                </a></li>
+            </div>
+            <li><a href="/about_diabetes">
+                    <p class="menu_item_text">About diabetes</p>
+                </a></li>
+
+            <li><a href="/about">
+                    <p class="menu_item_text">About this website</p>
+                </a></li>
+            
+        </ul>
+    </div>
+</header>

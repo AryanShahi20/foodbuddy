@@ -1,0 +1,45 @@
+{{> badge_explain}}
+
+<div class="speech_maxwidth center_leaderboard">
+        <h1>Leaderboard</h1>
+
+        <p class="margin_bottom">Make your way to the top by maintaining the longest unending streak of tasks completed every day!</p>
+
+        <h2>You</h2>
+        <table class="one_user margin_bottom">
+            <tr class="highlighted_user table_corner_bottom_left table_corner_bottom_right table_corner_top_left table_corner_top_right">
+                <td class="table_rank table_corner_bottom_left table_corner_top_left">#{{{my_info.rank}}}</td>
+                <td>
+                    <div class="flex_group flex_around left_align">
+                    <img class="margin_right" onclick="engagementPopup()" src={{{my_info.badge}}}>
+                     {{{my_info.name}}}
+                    </div>
+                </td>
+                <td class="table_percent table_corner_bottom_right table_corner_top_right">{{{my_info.rate}}}%></td>
+            </tr>
+        </table>
+
+        <h2>The board</h2>
+        <table class="leaderboard">
+
+
+            {{#each engagement}}
+                <tr>
+                <td class="table_rank">#{{{this.rank}}}</td>
+                <td>
+                    <div class="flex_group flex_around left_align">
+                    <img class="margin_right" onclick="engagementPopup()" src={{{this.badge}}}>
+                     {{{this.name}}}
+                    </div>
+                </td>
+                <td class="table_percent">{{{this.rate}}}%></td>
+            </tr>
+            {{/each}}
+            
+        </table>
+    
+
+        <div>
+            {{> partial_back_button address="."}}
+        </div>
+    </div>

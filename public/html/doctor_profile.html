@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <header class="toolbar page_margins">
+        <p class="toolbar_logo">Insulin Buddy</p>
+
+        <div class="toolbar_buttons_div desktop_design">
+            <a href="/">
+                <object
+                    data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6i-e43aba7c-89fb-4337-9073-aef77441205c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2aS1lNDNhYmE3Yy04OWZiLTQzMzctOTA3My1hZWY3NzQ0MTIwNWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rnGcVPZJ4EE2OuyKKDdI2rWjc96xqHVfLbBZ9uC-H7Y"></object>
+                <p>Log in</p>
+            </a>
+            <!-- This option shouldn't be available until the user has logged in -->
+            <a href="#">
+                <object
+                    data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6o-6b277ada-dc7a-42cd-a662-13db0c31ae2a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2by02YjI3N2FkYS1kYzdhLTQyY2QtYTY2Mi0xM2RiMGMzMWFlMmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ArCutlkMjVVJlf7GUiT6wihtB9k-84R-z_gQUbsqL8E"></object>
+                <p>Dashboard</p>
+            </a>
+            <!-- This option shouldn't be available until the user has logged in -->
+            <a href="/leaderboard">
+                <object
+                    data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6v-14b588a7-88e5-437d-8776-2960ac3e4132.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2di0xNGI1ODhhNy04OGU1LTQzN2QtODc3Ni0yOTYwYWMzZTQxMzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dOGCcTtIiMXeiznTNU7ISfC81lemdl2FF-i_JV4Ncrw"></object>
+                <p>Leaderboard</p>
+            </a>
+            <a href="/about_diabetes">
+                <p class="toolbar_text">
+                    About diabetes
+                </p>
+            </a>
+            <!-- The class "background" in about_page.html isn't included. I need to talk to the team about this -->
+            <a href="/about">
+                <p class="toolbar_text">
+                    About this website
+                </p>
+            </a>
+        </div>
+
+        <!-- DROP-DOWN MENU FOR MOBILE-->
+        <div class="toolbar_hamburger phone_design">
+            <object
+                data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp7f-6efdb692-e7d5-49ac-9d18-035ab9ddc90a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA3Zi02ZWZkYjY5Mi1lN2Q1LTQ5YWMtOWQxOC0wMzVhYjlkZGM5MGEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pv1dW-YPlVFSzdhb8heNAF7H8tGY6QYXpWkF_YGaNXE"></object>
+            <ul class="menu">
+                <li>
+                    <div id="menu_header">Menu</div>
+                </li>
+
+                <li><a href="/">
+                        <object
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6i-e43aba7c-89fb-4337-9073-aef77441205c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2aS1lNDNhYmE3Yy04OWZiLTQzMzctOTA3My1hZWY3NzQ0MTIwNWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rnGcVPZJ4EE2OuyKKDdI2rWjc96xqHVfLbBZ9uC-H7Yg"></object>
+                        <p class="menu_item_text">Log in</p>
+                    </a></li>
+
+                <li><a href="#">
+                        <object
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6o-6b277ada-dc7a-42cd-a662-13db0c31ae2a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2by02YjI3N2FkYS1kYzdhLTQyY2QtYTY2Mi0xM2RiMGMzMWFlMmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ArCutlkMjVVJlf7GUiT6wihtB9k-84R-z_gQUbsqL8E"></object>
+                        <p class="menu_item_text">Dashboard</p>
+                    </a></li>
+
+                <li><a href="#">
+                        <object
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6v-14b588a7-88e5-437d-8776-2960ac3e4132.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2di0xNGI1ODhhNy04OGU1LTQzN2QtODc3Ni0yOTYwYWMzZTQxMzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dOGCcTtIiMXeiznTNU7ISfC81lemdl2FF-i_JV4Ncrw"></object>
+                        <p class="menu_item_text">Leaderboard</p>
+                    </a></li>
+
+                <li><a href="#">
+                        <p class="menu_item_text">About diabetes</p>
+                    </a></li>
+
+                <li><a href="/about">
+                        <p class="menu_item_text">About this website</p>
+                    </a></li>
+
+                <li><a href="/">
+                        <p class="menu_item_text">Log out</p>
+                    </a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="center page_margins">
+        <h1>Doctor Name</h1>
+
+        <form class="center margin_bottom_s">
+            <div class="user table_corner_top_left table_corner_top_right">
+                <label>Given name</br></label>
+                <input class="profile_input" placeholder="{{replace me with current value}}">
+            </div>
+    
+            <div class="user">
+                <label>Family name</br></label>
+                <input class="profile_input" placeholder="{{replace me with current value}}">
+            </div>
+    
+            <div class="user">
+                <label>Email</br></label>
+                <input class="profile_input" placeholder="{{replace me with current value}}">
+            </div>
+    
+            <div class="user">
+                <label>Birth year</br></label>
+                <input class="profile_input" placeholder="{{replace me with current value}}">
+            </div>
+
+            <div class="user table_corner_bottom_left table_corner_bottom_right">
+                <label>Bio</br></label>
+                <input class="profile_input" placeholder="{{replace me with current value}}">
+            </div>
+        </form>
+    
+        <h3 class="margin_bottom">Click on a field to edit</h3>
+
+        <!--Can we have this appear when a form is touched by a user?-->
+        <div class="flex_group cluster_block" style="margin: 0 auto;">
+            <button class="btn btn-with-border btn_big margin_right">
+                <a href="#">Cancel</a>
+            </button>
+
+            <button class="btn btn-colour-primary btn_big">
+                <a href="#">Submit changes</a>
+            </button>
+        </div>
+
+        <button class="btn btn-colour-primary btn_big margin_bottom">
+            <a href="#">Back</a>
+        </button>
+    </div>
+
+
+    <footer class="footer">
+        <p class="footer_text">
+            Website design (c) Aryan Shahi, Jiachen Si, Melana Uceda, Kevin Zhao, and Annie Zhu
+        </p>
+
+        <p class="toolbar_logo">
+            Insulin Buddy
+        </p>
+
+        <p class="footer_text">
+            In an emergency, dial 000
+        </p>
+    </footer>
+</body>
+
+</html>

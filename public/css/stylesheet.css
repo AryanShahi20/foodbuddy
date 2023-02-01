@@ -1,0 +1,904 @@
+/* Note about this CSS file:
+    It is written to cater for the smallest screen size. Adjustments for bigger
+    screen sizes (e.g. font size changes) are made in the responsive.css document.
+
+/*---------------------------------------- Fonts --------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+/*---------------------------------- Global definitions --------------------------*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+:root{
+    /* Document colours */
+    --colour-primary: #0AB5CF;
+    --colour-primary-tint: #CFE3E6;
+    --colour-secondary: #fbf204;
+    --colour-secondary-tint: #FCFAD1;
+    --colour-grey: #7d7d7d;
+    --colour-main-text: #000;
+    --colour-contrast-text: #fff;
+
+    /* Document fonts */
+    --font-header: 'Fredoka One', cursive;
+    --font-body: 'Karla', sans-serif;
+
+    /* Document text sizes */
+    --text-mobile-header: 30px;
+    --text-mobile-body: 16px;
+    --text-desktop-header: 45px;
+    --text-desktop-body: 20px;
+    --text-desktop-data: 16px;
+    --text-bigbutton: 24px;
+    --text-label: 12px;
+
+    /* Document spacing */
+    --spacing-xxs: 5px;
+    --spacing-xs: 10px;
+    --spacing-s: 15px;
+    --spacing-m: 30px;
+    --spacing-l: 45px;
+    --spacing-xl: 60px;
+    --spacing-xxl: 100px;
+
+    --toolbar-height: 58px;
+    --drop-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+* {
+    font-family: var(--font-body);
+    font-weight: normal;
+    font-style: normal;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Page headings */
+h1 {
+    font-family: var(--font-header);
+    font-size: var(--text-mobile-header);
+    margin: var(--spacing-m) 0;
+}
+
+/* Page subheadings */
+h2 {
+    font-family: var(--font-body);
+    font-size: var(--text-mobile-body);
+    font-weight: bold;
+    margin: 0 0 var(--spacing-s) 0;
+}
+
+/* Mini labels (e.g. for forms) */
+h3 {
+    font-family: var(--font-body);
+    font-size: var(--text-label);
+}
+
+p {
+    font-family: var(--font-body);
+    font-size: var(--text-mobile-body);
+}
+
+.clinician_text * p {
+    font-size: var(--text-mobile-body);
+}
+
+li {
+    font-family: var(--font-body);
+    font-size: var(--text-mobile-body);
+}
+
+form {
+    text-align: left;
+}
+
+input {
+    text-align: left;
+    border-radius: 20px;
+    padding: var(--spacing-s);
+    outline: none;
+    font-size: var(--text-mobile-body);
+}
+
+object, img {
+    width: 30px;
+}
+
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+}
+    
+.cluster_block {
+    margin-right: 0 var(--spacing-m) 0 0;
+    max-width: 700px;
+    width: 100%;
+}
+
+.flex_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex_around {
+    justify-content: center;
+}
+
+.flex_around_margin_right {
+    margin-right: 2vw;
+}
+
+.flex_around_margin_left {
+    margin-left: 2vw;
+}
+
+.no_margin {
+    margin: 0;
+}
+
+.margin_bottom {
+    margin-bottom: var(--spacing-xl);
+}
+
+.margin_bottom_m {
+    margin-bottom: var(--spacing-m);
+}
+
+.margin_bottom_s {
+    margin-bottom: var(--spacing-s);
+}
+
+.margin_right {
+    margin-right: var(--spacing-s);
+}
+
+.width75 {
+    width: 75%;
+}
+
+.width90 {  
+    width: 90%;
+}
+
+.background {
+    width:100%;
+    font-size: var(--text-mobile-body);
+}
+
+.center {
+    justify-content: center;
+    text-align: center;
+}
+
+.center_via_margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left_align {
+    justify-content: left;
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+
+
+/* elements with class phone_design will show only in phone size screen, desktop_design will show in desktop and hide in phone size */
+.phone_design {
+    display: block;
+}
+
+/* onclick elements */
+.desktop_design, #commentPopup, #changeThresholds, #contactPhysician1, 
+#contactPhysician2, #editEmail, #editUsername, #editBirth, #editBio, 
+#submitButtons, #engagement_popup {
+    display: none;
+}
+
+.page_margins {
+    padding: 0 35px 0 35px;
+    width: 100vw;
+}
+
+
+/* TABLE STYLES (see example of application in patient dashboard) */
+
+table, .detail_form { 
+    border: 2px solid var(--colour-primary);
+    border-radius: var(--spacing-s); 
+    border-spacing: 0;
+    width: 100%;
+    background-color: var(--colour-primary-tint);
+    }
+
+  table td, table th { 
+    border-bottom: 2px solid var(--colour-primary);
+    padding: var(--spacing-s);
+    }
+
+  table tr:last-child > td {
+    border-bottom: none;
+  }
+
+/* Table corners - apply to to tr and td*/
+.table_corner_top_left {
+    border-top-left-radius: var(--spacing-s);
+}
+
+.table_corner_top_right {
+    border-top-right-radius: var(--spacing-s);
+}
+
+.table_corner_bottom_left {
+    border-bottom-left-radius: var(--spacing-s);
+}
+
+.table_corner_bottom_right {
+    border-bottom-right-radius: var(--spacing-s);
+}
+
+.text_under_table {
+    text-align: center;
+    margin: var(--spacing-xs) 0 var(--spacing-xl);
+}
+
+/* --------------------------- TOOLBAR SECTION -----------------------------------*/
+.toolbar {
+    height: var(--toolbar-height);
+    width: 100vw;
+    background-color: var(--colour-primary);
+}
+
+.toolbar * {
+    float: left;
+}
+
+.toolbar_logo {
+    font-size: 24px;
+    font-family: var(--font-header);
+    color: var(--colour-secondary);
+    margin-top: var(--spacing-s);
+}
+
+.toolbar_buttons_div {
+    float: right;
+    height: 100%;
+    margin-top:20px;
+}
+
+.toolbar_buttons_div * {
+    
+    margin-left: 10px;
+    text-decoration: none;
+    color: var(--colour-contrast-text);
+    font-size: var(--text-mobile-body);
+}
+
+.toolbar_buttons_div object {
+    margin-left: var(--spacing-xl);
+    margin-top: -5px;
+    color: var(--colour-secondary);
+}
+
+.toolbar_text {
+    margin-left: var(--spacing-xl);
+    
+}
+
+/* hide objects when logged in */
+.logged_in {
+    visibility: visible;
+}
+
+.not_logged_in {
+    visibility: hidden;
+}
+
+.clinician_hide {
+    display: none;
+}
+
+
+/* MANAGING MOBILE DROPDOWN MENU */
+
+.toolbar_hamburger {
+    float: right;
+    margin-top: var(--spacing-s);
+}
+
+.menu {
+    background-color: var(--colour-primary);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transform-origin: right;
+    transform: scale(0,1);
+    transition: 100ms ease-in-out 100ms;
+    list-style-type: none;
+    top:auto;
+    width: 264px;
+    text-align: left;
+    padding: 0 0 0 25px;
+    height: 100vh;
+    top: 0px;
+    right: 0px;
+    z-index: 100;
+  }
+
+/* bring list items back upon hover */
+div:hover ul {
+    transform: scale(1,1);
+  }
+
+.menu_item_text {
+    font-size: var(--text-bigbutton);
+    color: var(--colour-contrast-text);
+    margin-bottom: var(--spacing-m);
+}
+
+li a object {
+    margin-right: var(--spacing-xs);
+    color: var(--colour-secondary);
+}
+
+#menu_header {
+    font-size: 40px;
+    font-family: var(--font-header);
+    color: var(--colour-secondary);
+    margin: var(--spacing-s) 0 var(--spacing-l) 0;
+}
+
+
+
+/* ------------------------------ end TOOLBAR SECTION ----------------------------*/
+
+/* ------------------------------- FOOTER SECTION ---------------------------------------------- */
+
+/* Default screen size, Desktop size */
+.footer {
+    width: 100%;
+    background-color: var(--colour-primary);
+    padding: var(--spacing-m) 35px 0 35px;
+}
+
+.footer_text {
+    font-size: 12px;
+    text-align: center;
+    color: var(--colour-contrast-text);
+    padding-bottom: var(--spacing-m);
+    margin-bottom: 0;
+}
+
+footer .toolbar_logo {
+    text-align: center;
+    margin-bottom: var(--spacing-m);
+}
+
+
+/* ------------------------------- end FOOTER SECTION ------------------------------------------ */
+
+/*---------------------------------- PATIENT DASHBOARD SECTION ------------------------------*/
+
+#patient_dash_header {
+    font-size: var(--text-desktop-header);
+}
+
+.table_percent {
+    width: 73px;
+    justify-content: right;
+    color: var(--colour-grey)
+}
+
+.table_rank {
+    width: 73px;
+    justify-content: left;
+}
+
+.highlighted_user {
+    background-color: var(--colour-primary);
+}
+
+table.leaderboard {
+    text-align: left;
+    border-radius: var(--spacing-s) var(--spacing-s) 0 0; 
+}
+
+table.current_user {
+    text-align: left;
+    border-radius: 0 0 var(--spacing-s) var(--spacing-s);
+    background-color: var(--colour-primary); 
+    margin: -2px 0 0 0;
+}
+
+table.one_user {
+    text-align: left;
+    border-radius: var(--spacing-s);
+    background-color: var(--colour-primary); 
+}
+
+/* Tick boxes */
+.tick_box {
+    width: 41px;
+    height: 41px;
+    border: 5px solid var(--colour-primary-tint);
+    background-color: var(--colour-contrast-text);
+    box-shadow: var(--drop-shadow);
+    border-radius: 10px;
+    justify-content: center;
+    padding: 15px;
+    margin-right: var(--spacing-xs);
+}
+
+.tick_box:hover {
+    border-color: var(--colour-secondary-tint);
+}
+
+.tick_box:active, .tick_box_complete:active {
+    border-color: var(--colour-primary);
+}
+
+
+.tick_box_complete {
+    padding: 5px 2.85px;
+    border-color: var(--colour-primary);
+    background-color: var(--colour-primary-tint);
+}
+
+.tick_box_complete:hover, .tick_box_complete object:hover {
+    border-color: var(--colour-secondary);
+    background-color: var(--colour-secondary-tint);
+    color: var(--colour-secondary);
+}
+
+/* ------------------------------- end PATIENT DASHBOARD SECTION ------------------------------------------ */
+
+
+/*-------------------------- about_diabetes.html exclusive definitions --------------------------*/
+
+/* List for diabetes page */
+.cluster li {
+    margin-left: var(--spacing-l);
+}
+
+iframe {
+    width:100%;
+    height:315px;
+    margin: var(--spacing-l) 0; 
+}
+
+/*------------------------ End about_diabetes.html exclusive definitions ---------------------*/
+
+/*-------------------------- add_data.html exclusive definitions --------------------------*/
+form.add_data_form input {
+    border-radius: 20px;
+    border: 2px solid #0AB5CF;
+    box-shadow: 2px 2px #7d7d7d;
+    padding: 20px; 
+    width: 100%;
+    height: 10px;
+    outline: none;
+}
+
+form.add_data_form textarea {
+    border-radius: 20px;
+    border: 2px solid #0AB5CF;
+    box-shadow: 2px 2px #7d7d7d;
+    padding: 20px; 
+    width: 100%;
+    height: 150px;
+}
+/*------------------------ End add_data.html exclusive definitions ---------------------*/
+
+/*-------------------------- Data viewing exclusive definitions --------------------------*/
+/* Table styling */
+.data_viewing_table {
+    border-radius: 0;
+    border: 0px;
+    background-color: #fff;
+    max-width: 1700px;
+    margin: 0px auto;
+}
+
+.data_viewing_table tbody tr {
+    border-bottom: 2px solid var(--colour-primary);
+    background-color: var(--colour-primary-tint);
+}
+
+.data_viewing_table tbody tr.pink {
+    background-color: #EEBEBE;
+}
+
+.data_viewing_table tbody > tr:last-child {
+    border-bottom: 0px;
+}
+
+.data_viewing_table tbody tr td img {
+    width: 50px;
+}
+
+.data_viewing_table tbody tr td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 25%;
+    min-width: 25%;
+    text-align: center;
+}
+
+.data_viewing_table thead tr {
+    background-color: var(--colour-primary);
+    color: var(--colour-main-text);
+    border-radius: var(--spacing-s); 
+}
+
+.data_viewing_table thead tr td{
+    background-color: var(--colour-primary);
+    color: var(--colour-main-text);
+    text-align: center;
+}
+
+.comment_column {
+    max-width: 10%;
+    border-radius: 0 var(--spacing-s) 0 0;
+}
+
+.data_select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
+    font-size: 30px;
+    max-width: 1700px;
+    margin: 0px auto;
+}
+
+.data_select p {
+    margin-bottom: var(--spacing-xxs); 
+    margin-top: var(--spacing-xxs); 
+    font-size: var(--text-mobile-body);
+    font-weight: bold;
+}
+
+#data_selectTop {
+    margin-bottom: var(--spacing-xs);
+}
+
+#data_selectBottom {
+    margin-top: var(--spacing-xs);
+}
+
+.popup {
+    background-color: rgba(0,0,0,0.5) !important;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.popup_content {
+    position: absolute;
+    width: 560px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+
+/*-------------------------- End data viewing exclusive definitions --------------------------*/
+
+/*-------------------------- Clinician dashboard exclusive definitions --------------------------*/
+
+/* more generic definitions */
+.row_header {
+    display: flex;
+    flex-direction: column;
+}
+
+.margin_5 {
+    margin: 0 var(--spacing-s);
+}
+
+.top_margin {
+    margin-top: var(--spacing-m);
+}
+
+.top_bottom_margin {
+    margin: var(--spacing-s) 0 var(--spacing-l) 0;
+}
+
+.clinician_margin {
+    margin: 0 30px;
+}
+
+.row_image {
+    height: 50%;
+}
+
+/* more specific definitions */
+
+.search_bar {
+    width: 540px;
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp7j-02629745-374c-4bea-8a38-b4ce106a3a44.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA3ai0wMjYyOTc0NS0zNzRjLTRiZWEtOGEzOC1iNGNlMTA2YTNhNDQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Z7KgjE8yZHDdvBLN1grZn-B3mALBrVqCJL6rPkQeNCw) no-repeat scroll 7px 7px;
+    padding-left:30px;
+    background-size: 17px 17px;
+    background-position: 2% 50%;
+}
+
+.center_text {
+    text-align: center;
+}
+
+.clinician_text {
+    align-items: flex-start;
+}
+
+.color_box {
+    width: 31px;
+    height: 31px;
+    border-radius: 9px;
+}
+
+.pink {
+    background: #EEBEBE;
+}
+
+.blue {
+    background: #CFE3E6;
+}
+
+.white {
+    background: #FFFFFF;
+    border: var(--colour-main-text) 2px solid;
+}
+
+.grey {
+    background: var(--colour-grey);
+}
+
+.grey_text {
+    color: var(--colour-grey);
+}
+
+
+/* comment section */
+.patient_features {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-self: flex-start;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.comment_container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: var(--colour-secondary);
+    align-items: center;
+    border-radius: 25px;
+    justify-content: center;
+    width: 100%;
+}
+
+.comment_section{
+    max-height: 500px;
+    max-width: 100%;
+    overflow-y:scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.comments_width, .data_viewing_table tbody tr td.comments_width { 
+    width: 70%;
+    text-align: left;
+}
+
+::-webkit-scrollbar {
+width: 0px;
+background: transparent; /* make scrollbar transparent */
+}
+
+/* --------------------------- CLINICIAN INDIVIDUAL PATIENT SECTION -----------------------------------*/
+
+.threshold_text {
+    text-align: left;
+    line-height: 40px;
+    padding: 0;
+    font-size: var(--text-mobile-body);
+}
+
+.threshold_line {
+    width: 100%;
+    align-items: center;
+}
+
+input.form_white {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 7px;
+    text-align: center;
+    margin: 0 5px;
+    box-shadow: var(--drop-shadow);
+    max-width: 30px;
+  }
+
+input.width_threshold_m {
+    max-width: 40px;
+}
+
+input.width_threshold_l {
+    max-width: 60px;
+}
+
+
+  /* --------------------------- CLINICIAN ADD PATIENT SECTION -----------------------------------*/
+  .user {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--colour-primary-tint);
+    border: 2px solid var(--colour-primary);
+    margin: -2px auto;
+    padding: 10px;
+}
+
+label {
+    font-family: var(--font-body);
+    font-size: var(--text-mobile-body);
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    justify-content: left;
+    margin-bottom: 5px;
+}
+
+input.profile_input {
+    display: block;
+    text-align: left;
+    background-color: var(--colour-primary-tint);
+    border: 0;
+    box-shadow: none;
+    border-radius: var(--spacing-s);
+    font-size: var(--text-mobile-body);
+    width: 100%;
+    padding: 10px 0;
+}
+
+.table_white { 
+    background-color: white;
+}
+
+input.table_white { 
+    background-color: white;
+}
+
+input.btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tint_background {
+    background-color: var(--colour-primary-tint);
+}
+
+.red {
+    color: red;
+}
+
+  /* --------------------------- USER PROFILE SECTION -----------------------------------*/
+  
+img.user_badge {
+    height: 90px;
+    width: 90px;
+    margin-top: var(--spacing-m);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.engagement_badge {
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+}
+
+.user_text {
+    text-align: left;
+    font-size: var(--text-mobile-body);
+    width: 100%;
+}
+
+.user_info {
+    font-family: var(--font-body);
+    font-size: var(--text-label);
+    display: block;
+    text-align: left;
+    justify-content: left;
+    color: var(--colour-grey);
+}
+
+.user_warning {
+    color: #DC1313;
+}
+
+
+  /* --------------------------- LOGIN PAGE SECTION -----------------------------------*/
+
+h1.login_header {
+    font-size: 60px;
+    padding-top: 15vh;
+    margin-top: -1px;
+}
+
+.login_body {
+    background-color: var(--colour-primary);
+    padding: 0 0 var(--spacing-xl) 0;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+}
+
+  .color_yellow {
+      color: var(--colour-secondary);
+  }
+
+  .color_white {
+      color: var(--colour-contrast-text);
+  }
+
+input.login_form, .login_label {
+    width: 100vw;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h3.login_label {
+    padding: var(--spacing-xxs);
+  }
+
+#login_form {
+    width: 100vw;
+    max-width: 400px;
+}
+
+.change_password { 
+    border-radius: 20px;
+    border: 2px solid #0AB5CF;
+    box-shadow: 2px 2px #7d7d7d;
+    padding: 20px; 
+    width: 400px;
+    height: 10px;
+    outline: none;
+}
+ /* --------------------------- Badge Explanation -----------------------------------*/
+
+ .badge_explanation {
+    background-color: #fff;
+    border: 2px solid #fbf204; 
+    padding: 20px; 
+    border-radius: 20px;
+    align-items: center;
+}

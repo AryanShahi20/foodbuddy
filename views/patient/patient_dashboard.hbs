@@ -1,0 +1,71 @@
+{{> badge_explain}}
+
+<h1 id="patient_dash_header" class="speech_maxwidth center_via_margin">Welcome, {{{patient_name}}}!</h1>
+
+<div class="cluster flex_around center_via_margin">
+    <div class="cluster_block speech_maxwidth margin_bottom flex_around_margin_right">
+        <h2>Your daily measurements</h2>
+
+        {{#each tick_box_state}}
+            <a href="{{{this.param}}}/">
+            <div class="flex_group">
+                <div class="tick_box {{{this.tick_box_complete}}}">
+                    <object data="{{{this.tick_img}}}"></object>
+                </div>
+                <div class="btn btn-dashboard flex_group btn-colour-primary-tint {{{this.btn_color}}}">
+                    {{{this.name}}}
+                    <object data={{{this.icon}}}></object>
+                </div>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+
+    <div class="cluster_block speech_maxwidth no_margin flex_around_margin_left">
+        <h2>A message for you</h2>
+        <div class="speech_maxwidth margin_bottom_s">
+            <div class="speech_bubble">
+                <h3>From Doctor {{{doctor_last_name}}} {{{date}}}</h3>
+                <p>{{{msg}}}</p>
+            </div>
+            <object class="speech_bubble_point"
+                data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hpg2-32a52c69-88e6-4119-871e-827705344ec7.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHBnMi0zMmE1MmM2OS04OGU2LTQxMTktODcxZS04Mjc3MDUzNDRlYzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BNexgt8jqJDLSyEgmnSbEI21Ije7z4jYggIv-kboPig"></object>
+        </div>
+    
+    <div class="speech_maxwidth center_via_margin">
+    <h2>Leaderboard: Your Rank</h2>
+        <table class="one_user margin_bottom_m">
+            <tr class="highlighted_user table_corner_bottom_left table_corner_bottom_right table_corner_top_left table_corner_top_right">
+                <td class="table_rank table_corner_bottom_left table_corner_top_left">#{{{my_info.rank}}}</td>
+                <td>
+                    <div class="flex_group flex_around left_align">
+                    <img class="margin_right" onclick="engagementPopup()" src={{{my_info.badge}}}>
+                     {{{my_info.name}}}
+                    </div>
+                </td>
+                <td class="table_percent table_corner_bottom_right table_corner_top_right">{{{my_info.rate}}}%></td>
+            </tr>
+        </table>
+    <h2>Leaderboard: Top 5</h2>
+    <table class="leaderboard">
+        {{#each engagement}}
+        <tr class="table_corner_top_left table_corner_top_right">
+        <td class="table_rank table_corner_top_left">#{{this.rank}}</td>
+        <td>
+            <div class="flex_group flex_around left_align">
+            <img class="margin_right" onclick="engagementPopup()" src={{{this.badge}}}>
+                {{this.name}}
+            </div>
+        </td>
+        <td class="table_percent table_corner_top_right">{{this.rate}}%></td>
+        </tr>
+        {{/each}}
+    </table>
+    
+
+    <a href="leaderboard/">
+        <a href="/patient/leaderboard"><h3 class="text_under_table">See full leaderboard ></h3></a>
+    </a>
+</div>
+    </div>
+</div>

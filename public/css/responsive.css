@@ -1,0 +1,133 @@
+/* Original min-width: 927 */
+@media screen and (min-width: 927px) {
+    .background {
+        font-size: var(--text-desktop-body);
+    }
+
+    h1 {
+        font-size: var(--text-desktop-header);
+    }
+
+    h2 {
+        font-size: var(--text-desktop-body);
+    }
+
+    .data_select h2 {
+        font-size: var(--text-desktop-body);
+    }
+
+    p {
+        font-size: var(--text-desktop-body);
+    }
+
+    li {
+        font-size: var(--text-desktop-body);
+    }
+
+    h1.login_header {
+        font-size: 100px;
+    }
+
+    .center_leaderboard {
+        text-align: center;
+        margin: auto;
+        }
+    
+        #patient_dash_header, h1 {
+            text-align: center;
+        }
+
+    img.user_badge {
+        height: 140px;
+        width: 140px;
+    }
+}
+
+/* Swap to desktop design once browser atleast 950px */
+@media screen and (min-width: 950px) {
+    .roundedCorners tr td, .data_viewing_table tr td, .data_viewing_table tr th {
+        font-size: var(--text-desktop-body)
+    }
+}
+
+/* Adjust the footer to always appear on the bottom of the page for each dimension */
+@media screen and (min-height: 812px) {
+    main {
+        min-height: 650px;
+    }
+}
+
+@media screen and (min-height: 768px) {
+    main {
+        min-height: 606px;
+    }
+}
+
+@media screen and (min-height: 1080px) {
+    main {
+        min-height: 918px;
+    }
+}
+
+/* original min-width: 1115px */
+@media screen and (min-width: 1160px) {
+    .phone_design {
+        display: none;
+    }
+    
+    .desktop_design {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1137px) {
+
+    /* Fixes to about page weirdness */ 
+    .about_header {
+        font-size: var(--text-desktop-header)
+    }
+
+    .about_speech_bubble {
+        max-width: 560px;
+    }
+    .about_speech_bubble p {
+        font-size: 16px;
+    }
+    .about_speech_maxwidth {
+        width: 45vw;
+        max-width: 560px;
+    }
+
+
+    /* List for diabetes page */
+
+    .flexContainer {
+        display: flex;
+        padding: 0px;
+        align-items: center;
+    }
+    .triSectionText {
+        width: 33.3%;
+        align-self: flex-start;
+        font-size: var(--text-mobile-body);
+    }
+    
+    .sectionText {
+        width: 60%;
+        align-self: flex-start;
+    }
+    iframe {
+        margin-top:0;
+    }
+    
+}
+
+@media screen and (min-width: 1550px) {
+    .page_margins {
+        padding: 0 140px 0 140px;
+    }
+
+    .extra_margin {
+        margin-right: 150px;
+    }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <header class="toolbar page_margins">
+        <p class="toolbar_logo">Insulin Buddy</p>
+
+        <div class="toolbar_buttons_div desktop_design">
+            <a href="/">
+                <object
+                    data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6i-e43aba7c-89fb-4337-9073-aef77441205c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2aS1lNDNhYmE3Yy04OWZiLTQzMzctOTA3My1hZWY3NzQ0MTIwNWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rnGcVPZJ4EE2OuyKKDdI2rWjc96xqHVfLbBZ9uC-H7Y"></object>
+                <p>Log in</p>
+            </a>
+            <!-- This option shouldn't be available until the user has logged in -->
+            <a href="#">
+                <object
+                    data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6o-6b277ada-dc7a-42cd-a662-13db0c31ae2a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2by02YjI3N2FkYS1kYzdhLTQyY2QtYTY2Mi0xM2RiMGMzMWFlMmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ArCutlkMjVVJlf7GUiT6wihtB9k-84R-z_gQUbsqL8E"></object>
+                <p>Dashboard</p>
+            </a>
+            <!-- This option shouldn't be available until the user has logged in -->
+            <a href="/leaderboard">
+                <object
+                    data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6v-14b588a7-88e5-437d-8776-2960ac3e4132.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2di0xNGI1ODhhNy04OGU1LTQzN2QtODc3Ni0yOTYwYWMzZTQxMzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dOGCcTtIiMXeiznTNU7ISfC81lemdl2FF-i_JV4Ncrw"></object>
+                <p>Leaderboard</p>
+            </a>
+            <a href="/about_diabetes">
+                <p class="toolbar_text">
+                    About diabetes
+                </p>
+            </a>
+            <!-- The class "background" in about_page.html isn't included. I need to talk to the team about this -->
+            <a href="/about">
+                <p class="toolbar_text">
+                    About this website
+                </p>
+            </a>
+        </div>
+
+        <!-- DROP-DOWN MENU FOR MOBILE-->
+        <div class="toolbar_hamburger phone_design">
+            <object
+                data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp7f-6efdb692-e7d5-49ac-9d18-035ab9ddc90a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA3Zi02ZWZkYjY5Mi1lN2Q1LTQ5YWMtOWQxOC0wMzVhYjlkZGM5MGEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pv1dW-YPlVFSzdhb8heNAF7H8tGY6QYXpWkF_YGaNXE"></object>
+            <ul class="menu">
+                <li>
+                    <div id="menu_header">Menu</div>
+                </li>
+
+                <li><a href="/">
+                        <object
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6i-e43aba7c-89fb-4337-9073-aef77441205c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2aS1lNDNhYmE3Yy04OWZiLTQzMzctOTA3My1hZWY3NzQ0MTIwNWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rnGcVPZJ4EE2OuyKKDdI2rWjc96xqHVfLbBZ9uC-H7Yg"></object>
+                        <p class="menu_item_text">Log in</p>
+                    </a></li>
+
+                <li><a href="#">
+                        <object
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6o-6b277ada-dc7a-42cd-a662-13db0c31ae2a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2by02YjI3N2FkYS1kYzdhLTQyY2QtYTY2Mi0xM2RiMGMzMWFlMmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ArCutlkMjVVJlf7GUiT6wihtB9k-84R-z_gQUbsqL8E"></object>
+                        <p class="menu_item_text">Dashboard</p>
+                    </a></li>
+
+                <li><a href="#">
+                        <object
+                            data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp6v-14b588a7-88e5-437d-8776-2960ac3e4132.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA2di0xNGI1ODhhNy04OGU1LTQzN2QtODc3Ni0yOTYwYWMzZTQxMzIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.dOGCcTtIiMXeiznTNU7ISfC81lemdl2FF-i_JV4Ncrw"></object>
+                        <p class="menu_item_text">Leaderboard</p>
+                    </a></li>
+
+                <li><a href="#">
+                        <p class="menu_item_text">About diabetes</p>
+                    </a></li>
+
+                <li><a href="/about">
+                        <p class="menu_item_text">About this website</p>
+                    </a></li>
+
+                <li><a href="/">
+                        <p class="menu_item_text">Log out</p>
+                    </a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="page_margins">
+    <div class="speech_maxwidth center_leaderboard">
+        <h1>Leaderboard</h1>
+
+        <p class="margin_bottom">Make your way to the top by maintaining the longest unending streak of tasks completed every day!</p>
+
+        <h2>You</h2>
+        <table class="one_user margin_bottom">
+            <tr class="highlighted_user table_corner_bottom_left table_corner_bottom_right table_corner_top_left table_corner_top_right">
+                <td class="table_rank table_corner_bottom_left table_corner_top_left">[rank]</td>
+                <td>
+                    <div class="flex_group flex_around left_align">
+                    <img class="margin_right" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df59xpx-8923d65e-ee2e-4c1b-bfa4-81ab5386e25a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY1OXhweC04OTIzZDY1ZS1lZTJlLTRjMWItYmZhNC04MWFiNTM4NmUyNWEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.MZBuFaMgsSf8q9XNhM3WuSKx3XQpo2XJ4Ep5sfs6mWM">
+                     [current username]
+                    </div>
+                </td>
+                <td class="table_percent table_corner_bottom_right table_corner_top_right">[#]% ></td>
+            </tr>
+        </table>
+
+        <h2>The board</h2>
+        <table class="leaderboard">
+            <tr class="table_corner_top_left table_corner_top_right">
+            <td class="table_rank table_corner_top_left">[rank]</td>
+            <td>
+                <div class="flex_group flex_around left_align">
+                <img class="margin_right" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df59xpt-1164a5e8-cb99-460d-9537-28d0a94b4b6a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY1OXhwdC0xMTY0YTVlOC1jYjk5LTQ2MGQtOTUzNy0yOGQwYTk0YjRiNmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1DeMd-TFi_jrRdFAg8pU84W6D-LEj5k6dwzDZNfEtRc">
+                 [username]
+                </div>
+            </td>
+            <td class="table_percent table_corner_top_right">[#]% ></td>
+            </tr>
+            <tr>
+                <td class="table_rank">[rank]</td>
+                <td>
+                    <div class="flex_group flex_around left_align">
+                    <img class="margin_right" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df59xpt-1164a5e8-cb99-460d-9537-28d0a94b4b6a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY1OXhwdC0xMTY0YTVlOC1jYjk5LTQ2MGQtOTUzNy0yOGQwYTk0YjRiNmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1DeMd-TFi_jrRdFAg8pU84W6D-LEj5k6dwzDZNfEtRc">
+                     [username]
+                    </div>
+                </td>
+                <td class="table_percent">[#]% ></td>
+            </tr>
+            <tr>
+                <td class="table_rank">[rank]</td>
+                <td>
+                    <div class="flex_group flex_around left_align">
+                    <img class="margin_right" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df59xpt-1164a5e8-cb99-460d-9537-28d0a94b4b6a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY1OXhwdC0xMTY0YTVlOC1jYjk5LTQ2MGQtOTUzNy0yOGQwYTk0YjRiNmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1DeMd-TFi_jrRdFAg8pU84W6D-LEj5k6dwzDZNfEtRc">
+                     [username]
+                    </div>
+                </td>
+                <td class="table_percent">[#]% ></td>
+            </tr>
+        </table>
+    
+        <table class="current_user">
+            <tr class="highlighted_user table_corner_bottom_left table_corner_bottom_right">
+                <td class="table_rank table_corner_bottom_left">[rank]</td>
+                <td>
+                    <div class="flex_group flex_around left_align">
+                    <img class="margin_right" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df59xpx-8923d65e-ee2e-4c1b-bfa4-81ab5386e25a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY1OXhweC04OTIzZDY1ZS1lZTJlLTRjMWItYmZhNC04MWFiNTM4NmUyNWEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.MZBuFaMgsSf8q9XNhM3WuSKx3XQpo2XJ4Ep5sfs6mWM">
+                     [current username]
+                    </div>
+                </td>
+                <td class="table_percent table_corner_bottom_right">[#]% ></td>
+            </tr>
+        </table>
+        <div class="flex_group center_text top_bottom_margin">
+            <h3><a href="left">{{arrows.left}}</a></h3>
+            <h3>{{curr_page}} of {{total_pages}}</h3>
+            <h3><a href="right">{{arrows.right}}</a></h3>
+        </div>
+    </div>
+</div>
+
+    <footer class="footer">
+        <p class="footer_text">
+            Website design (c) Aryan Shahi, Jiachen Si, Melana Uceda, Kevin Zhao, and Annie Zhu
+        </p>
+
+        <p class="toolbar_logo">
+            Insulin Buddy
+        </p>
+
+        <p class="footer_text">
+            In an emergency, dial 000
+        </p>
+    </footer>
+</body>
+
+</html>

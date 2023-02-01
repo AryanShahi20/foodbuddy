@@ -1,0 +1,151 @@
+<div>
+    <h1>{{{patient_name}}} Health Records</h1>
+    <div class="flex_group clinician_text margin_bottom flex_around">
+        <div class="cluster_block speech_maxwidth margin_bottom flex_around_margin_right">
+
+        {{#each tick_box_state}}
+            <a href="{{{this.param}}}/">
+            <div class="flex_group">
+                <div class="tick_box {{{this.tick_box_complete}}}">
+                    <object data="{{{this.tick_img}}}"></object>
+                </div>
+                <div class="btn btn-dashboard flex_group btn-colour-primary-tint {{{this.btn_color}}}">
+                    {{{this.name}}}
+                    <object data={{{this.icon}}}></object>
+                </div>
+            </div>
+        </a>
+        {{/each}}
+        
+        {{> partial_back_button}}
+    </div>
+
+        <div class="patient_features">
+
+            <div class="comment_container margin_bottom_s">
+
+                <h2 class="center_text">Add a clinicial note</h2>
+
+                <div>
+                    <form action="/clinician/clinician_patient/note" method="post">
+                    <div>
+                        <p class="grey_text speech_bubble speech_bubble_contrast about_speech_bubble speech_maxwidth">
+                            <input class="profile_input table_white" class= id="clinical_note" name="clinical_note" placeholder='Add note for patient'>
+                        </p>
+                        <object class="speech_bubble_point"
+                        data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp79-19039e4b-02fd-4450-89da-f1732b6526b9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA3OS0xOTAzOWU0Yi0wMmZkLTQ0NTAtODlkYS1mMTczMmI2NTI2YjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.buCvMy8w2anRVGwUrIVu_yF1wELAq57eiKgBgqP_m5A"></object>
+                        </div>
+                        <a href="">
+                            <input type="submit" value="Submit" class="btn btn-colour-primary margin_bottom_s btn_med">
+                        </a>
+                    </form>
+                </div>
+
+                <a href="/clinician/clinical_notes">
+                    <h3>See previous clinical notes</h3>
+                </a>
+
+            </div>
+
+            <div class="comment_container margin_bottom_s">
+
+                <h2 class="center_text">Send a support message</h2>
+
+                <div>
+                    <form action="/clinician/clinician_patient/msg" method="post">
+                    <div>
+                        <p class="grey_text speech_bubble speech_bubble_contrast about_speech_bubble speech_maxwidth">
+                            <input class="profile_input table_white" id="support_msg" name="support_msg" placeholder='Send a support message'>
+                        </p>
+                        <object class="speech_bubble_point"
+                        data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hp79-19039e4b-02fd-4450-89da-f1732b6526b9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHA3OS0xOTAzOWU0Yi0wMmZkLTQ0NTAtODlkYS1mMTczMmI2NTI2YjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.buCvMy8w2anRVGwUrIVu_yF1wELAq57eiKgBgqP_m5A"></object>
+                        </div>
+                        <a href="">
+                            <input type="submit" value="Submit" class="btn btn-colour-primary btn_med">
+                        </a>
+                    </form>
+                    
+                </div>
+
+            </div>
+
+            <!--patient data thresholds when form is inactive: the values are meant to be the current values-->
+            <div class="comment_container margin_bottom_s" id="staticThresholds">
+
+                <h2 class="center_text">"Healthy" patient data thresholds</h2>
+
+                <!-- once we get patients working we need to replace these numbers with the patients actual
+                values for the timeseries -->
+                <p class="threshold_text margin_bottom_s">
+                    <span class="bold">Insulin doses (per day):</span> 1</br>
+                    <span class="bold">Blood glucose max/min (nmol/L):</span> 7.0 / 10.0</br>
+                    <span class="bold">Weight (kg):</span> 85 / 95</br>
+                    <span class="bold">Exercise (steps):</span> 3,000 / 20,000
+                </p>
+
+                <!--Needs to be enabled/disabled depending on form status-->
+                <button class="btn btn-colour-primary no_margin" onclick="changeThresholds()">Edit</button>
+            </div>
+
+            <!--patient data thresholds when form is active: the values are meant to be the current values-->
+            <div class="comment_container margin_bottom_s" id="changeThresholds">
+
+                <h2 class="center_text">"Healthy" patient data thresholds</h2>
+
+                <form class="threshold_text margin_bottom_s" action="/clinician/clinician_patient/threshold" method="post" >
+                    <p class="margin_bottom_m">Should this patient track their...</p>
+
+                    <div class="threshold_text margin_bottom_s">
+                        <div class="cluster threshold_line">
+                            <p><span class="bold">Insulin doses?</span> (y / n)</p></br>
+                            <input class="form_white width_threshold_m" id="insulin_bool" name="insulin_bool" placeholder='n'>
+                        </div>
+                        <div class="cluster threshold_line margin_bottom_m">
+                            <p>min/max (number of doses)</p>
+                            <input class="form_white width_threshold_m" id="insulin_min" name="insulin_min" placeholder="0">
+                            <span> / </span>
+                            <input class="form_white width_threshold_m" id="insulin_max" name="insulin_max" placeholder="0">
+                        </div>
+
+                        <div class="cluster threshold_line">
+                            <p><span class="bold">Blood glucose?</span> (y / n)</p></br>
+                            <input class="form_white width_threshold_m" id="glucose_bool" name="glucose_bool" placeholder='n'>
+                        </div>
+                        <div class="cluster threshold_line margin_bottom_m">
+                            <p>min/max (nmol/L)</p>
+                            <input class="form_white width_threshold_m" id="glucose_min" name="glucose_min" placeholder="0">
+                            <span> / </span>
+                            <input class="form_white width_threshold_m" id="glucose_max" name="glucose_max" placeholder="0">
+                        </div>
+
+                        <div class="cluster threshold_line">
+                            <p><span class="bold">Weight?</span> (y / n)</p></br>
+                            <input class="form_white width_threshold_m" id="weight_bool" name="weight_bool" placeholder='n'>
+                        </div>
+                        <div class="cluster threshold_line margin_bottom_m">
+                            <p>min/max (kg)</p>
+                            <input class="form_white width_threshold_m" id="weight_min" name="weight_min" placeholder="0">
+                            <span> / </span>
+                            <input class="form_white width_threshold_m" id="weight_max" name="weight_max" placeholder="0">
+                        </div>
+
+                        <div class="cluster threshold_line">
+                            <p><span class="bold">Exercise?</span> (y / n)</p></br>
+                            <input class="form_white width_threshold_m" id="exercise_bool" name="exercise_bool" placeholder='n'>
+                        </div>
+                        <div class="cluster threshold_line margin_bottom_m">
+                            <p>min/max (kg)</p>
+                            <input class="form_white width_threshold_l" id="exercise_min" name="exercise_min" placeholder="0">
+                            <span>/</span>
+                            <input class="form_white width_threshold_l" id="exercise_max" name="exercise_max" placeholder="0">
+                        </div>
+                    </div>    
+                    <a href="">
+                        <input type="submit" value="Submit" class="btn btn-colour-primary margin_bottom btn_med">
+                    </a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

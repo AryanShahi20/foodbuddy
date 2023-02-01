@@ -1,0 +1,93 @@
+<h1 class="speech_maxwidth center_via_margin">Enter New Patient Details</h1>
+
+<form action="/clinician/new_patient/" method="post">
+    
+    {{#each flash}}
+        <p class="alert center_text margin_bottom_m red">{{this}}</p>
+    {{/each}}
+
+    <div class="cluster flex_around center_via_margin">
+        <div class="cluster_block speech_maxwidth margin_bottom flex_around_margin_right">
+            <div class="user table_corner_top_left table_corner_top_right">
+                <label>Given name</br></label>
+                <input class="profile_input" id="gname" name="gname">
+            </div>
+
+            <div class="user">
+                <label>Family name</br></label>
+                <input class="profile_input" id="fname" name="fname">
+            </div>
+
+            <div class="user">
+                <label>Email</br></label>
+                <input class="profile_input" id="email" name="email">
+            </div>
+
+            <div class="user table_corner_bottom_left table_corner_bottom_right margin_bottom_s">
+                <label>Birth year</br></label>
+                <input class="profile_input" id="year" name="year">
+            </div>
+        </div>
+
+        <div class="comment_container margin_bottom_s cluster_block speech_maxwidth flex_around_margin_right tint_background">
+
+            <h2 class="center_text">Assign Timeseries</h2>
+            <p class="margin_bottom_m">Should this patient track their...</p>
+
+            <div class="threshold_text margin_bottom_s">
+                <div class="cluster threshold_line">
+                    <p><span class="bold">Insulin doses?</span> (y / n)</p></br>
+                    <input class="form_white width_threshold_m" id="insulin_bool" name="insulin_bool" placeholder='n'>
+                </div>
+                <div class="cluster threshold_line margin_bottom_m">
+                    <p>min/max (number of doses)</p>
+                    <input class="form_white width_threshold_m" id="insulin_min" name="insulin_min" placeholder="0">
+                    <span> / </span>
+                    <input class="form_white width_threshold_m" id="insulin_max" name="insulin_max" placeholder="0">
+                </div>
+
+                <div class="cluster threshold_line">
+                    <p><span class="bold">Blood glucose?</span> (y / n)</p></br>
+                    <input class="form_white width_threshold_m" id="glucose_bool" name="glucose_bool" placeholder='n'>
+                </div>
+                <div class="cluster threshold_line margin_bottom_m">
+                    <p>min/max (nmol/L)</p>
+                    <input class="form_white width_threshold_m" id="glucose_min" name="glucose_min" placeholder="0">
+                    <span> / </span>
+                    <input class="form_white width_threshold_m" id="glucose_max" name="glucose_max" placeholder="0">
+                </div>
+
+                <div class="cluster threshold_line">
+                    <p><span class="bold">Weight?</span> (y / n)</p></br>
+                    <input class="form_white width_threshold_m" id="weight_bool" name="weight_bool" placeholder='n'>
+                </div>
+                <div class="cluster threshold_line margin_bottom_m">
+                    <p>min/max (kg)</p>
+                    <input class="form_white width_threshold_m" id="weight_min" name="weight_min" placeholder="0">
+                    <span> / </span>
+                    <input class="form_white width_threshold_m" id="weight_max" name="weight_max" placeholder="0">
+                </div>
+
+                <div class="cluster threshold_line">
+                    <p><span class="bold">Exercise?</span> (y / n)</p></br>
+                    <input class="form_white width_threshold_m" id="exercise_bool" name="exercise_bool" placeholder='n'>
+                </div>
+                <div class="cluster threshold_line margin_bottom_m">
+                    <p>min/max (kg)</p>
+                    <input class="form_white width_threshold_l" id="exercise_min" name="exercise_min" placeholder="0">
+                    <span>/</span>
+                    <input class="form_white width_threshold_l" id="exercise_max" name="exercise_max" placeholder="0">
+                </div>
+
+            </div>
+            <h3 class="center_text">"y" = "yes", "n"= "no". </br></br>You can always remove or assign new time series and change the thresholds for each patient.</h3>
+        </div>
+    </div>
+    <a href="" class="center">
+        <input type="submit" value="Submit" class="btn btn-colour-primary btn_big">
+    </a>
+</form>
+
+<div class="center">
+    {{> partial_back_button address="."}}
+</div>

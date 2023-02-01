@@ -1,0 +1,77 @@
+{{> badge_explain}}
+
+<div class="flex_group user_text">
+        <img class="user_badge" onclick="engagementPopup()" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df59xpt-1164a5e8-cb99-460d-9537-28d0a94b4b6a.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY1OXhwdC0xMTY0YTVlOC1jYjk5LTQ2MGQtOTUzNy0yOGQwYTk0YjRiNmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1DeMd-TFi_jrRdFAg8pU84W6D-LEj5k6dwzDZNfEtRc">
+</div>
+
+<div class="center">
+        <h1>{{{profile.gname}}} {{{profile.fname}}}</h1>
+    </div>
+
+    <form class="margin_bottom_s">
+        <div class="user table_corner_top_left table_corner_top_right" onclick="contactPhysician1()">
+            <label>Given name</br></label>
+            <p class="user_text">{{{profile.gname}}}</p>
+            <p id="contactPhysician1" class="user_info user_warning">Contact your physician to change your name.</p>
+        </div>
+
+        <div class="user" onclick="contactPhysician2()">
+            <label>Family name</br></label>
+            <p class="user_text">{{{profile.fname}}}</p>
+            <p id="contactPhysician2" class="user_info user_warning">Contact your physician to change your name.</p>
+        </div>
+
+        <div class="user" onclick="editEmail()">
+            <label>Email</br></label>
+            <p id="staticEmail" class="user_text">{{{profile.email}}}</p>
+            <!--on click, display this instead:-->
+            <div id="editEmail">
+                <input class="profile_input" placeholder="replace me with current value" onclick="revealButtons()">
+                <p class="user_info">This is the email we'll use to contact you, and which you can use to recover your account.</p>
+            </div>
+        </div>
+
+        <div class="user" onclick="editUsername()" onclick="revealButtons()">
+            <label>Username</br></label>
+            <p id="staticUsername" class="user_text">{{{profile.user}}}</p>
+            <!--on click, display this instead:-->
+            <div id="editUsername">
+                <input class="profile_input" placeholder="replace me with current value" onclick="revealButtons()">
+                <p class="user_info">This is the name that can be seen by other Insulin Buddy users on the leaderboards.</p>
+            </div>
+        </div>
+
+        <div class="user table_corner_bottom_left table_corner_bottom_right" onclick="editBio()" onclick="revealButtons()">
+            <label>Bio</br></label>
+            <p id="staticBio" class="user_text">{{{profile.bio}}}</p>
+            <!--on click, display this instead:-->
+            <div id="editBio">
+                <input class="profile_input" placeholder="replace me with current value" onclick="revealButtons()">
+                <p class="user_info">This bio will be displayed to other Insulin Buddy users.</p>
+            </div>
+        </div>
+    </form>
+
+    <div class="center">
+
+    <!--Hide this when field is clicked-->
+    <h3 class="margin_bottom">Click on a field to edit</h3>
+
+    <!--Can we have the next two buttons appear when a form is touched by a user?-->
+    <div class="flex_group cluster_block center_via_margin" id="submitButtons">
+        <button class="btn btn-with-border btn_big margin_right">
+            <a href="/clinician/clinician_profile">Cancel</a>
+        </button>
+
+        <a href="/clinician/clinician_profile"><input type="submit" value="Submit changes" class="btn btn-colour-primary btn_big"></a>
+    </div>
+
+    <button class="btn btn-colour-secondary btn_big">
+        <a href="../../change_password">Change password</a>
+    </button>
+
+    <div>
+            {{> partial_back_button address="."}}
+    </div>
+
+</div>

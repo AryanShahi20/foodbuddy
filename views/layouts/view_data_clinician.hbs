@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta nam="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="/css/front_end.js"></script>
+    <title>{{{title}}}</title>
+</head>
+<body>
+    {{> view_data_partial}}
+    {{> header}}
+    <main class="page_margins background">
+        <h1>{{header}}</h1>      
+        
+        {{!-- This part needs to be changed so that the numbers correspond to the number of entries there are. We'll need to setup the server before we can do this --}}
+        <div class="data_select speech_maxwidth center_via_margin" id="data_selectTop">
+            <p><a href="./left">{{arrows.left}}</a></p>
+            <p>{{curr_page}} of {{total_pages}}</p>
+            <p><a href="./right">{{arrows.right}}</a></p>
+        </div>
+
+        {{!-- Table Contents --}}
+        {{{body}}}
+
+        <h3 class="center">If a column is <span class="red">red</span>, this means that the data point is outside of safe thresholds.</h3>
+
+        <div class="data_select speech_maxwidth center_via_margin" id="data_selectTop">
+            <p><a href="./left">{{arrows.left}}</a></p>
+            <p>{{curr_page}} of {{total_pages}}</p>
+            <p><a href="./right">{{arrows.right}}</a></p>
+        </div>
+        
+        
+        {{!-- Back Button --}}
+        {{> partial_back_button address=".."}}
+    </main>
+    {{> footer}}
+</body>
+</html>

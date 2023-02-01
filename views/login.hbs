@@ -1,0 +1,36 @@
+<div class="login_body center">
+    <h1 class="color_yellow login_header">Insulin Buddy</h1>
+    <p class="margin_bottom color_white">For your diabetes tracking needs.</p>
+
+    {{#each flash}}
+    <p class="alert red">{{this}}</p>
+    {{/each}}
+
+    <form class="center_via_margin" id="login_form" action="login" method="POST">
+        <label for="username"><h3 class="color_white login_label">Username</br></h3></label>
+        <input type="text" name="username" class="login_form margin_bottom_s">
+
+        <label for="password"><h3 class="color_white login_label">Password</br></h3></label>
+        <input type="password" name="password" class="login_form margin_bottom_s">
+        <input type="submit" value="Log in" class="btn btn-colour-secondary margin_bottom">
+    </form>
+
+    <p class="color_yellow margin_bottom_m"><a href="/about_diabetes">About this website</a></p>
+    <p class="color_yellow margin_bottom"><a href="/about">About diabetes</a></p>
+
+    <div class="margin_bottom">&nbsp;</div>
+
+    <footer class="footer">
+    <p class ="footer_text">
+        Website design (c) Aryan Shahi, Jiachen Si, Melana Uceda, Kevin Zhao, and Annie Zhu
+    </p>
+
+    <p class="toolbar_logo">
+        Insulin Buddy
+    </p>
+
+    <p class = "footer_text">
+        In an emergency, dial 000
+    </p>
+</footer>
+</div>

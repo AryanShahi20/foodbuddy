@@ -1,0 +1,17 @@
+<!--Note that this would appear at the tope of every view data page. 
+Display is set to none in CSS; it should be triggered to appear on the click of
+a comment button.-->
+
+<div id="commentPopup" class="popup">
+    <div class="popup_content">
+        <div class="speech_maxwidth">
+            <div class="speech_bubble">
+                <h3>Comment {{{date}}}</h3>
+                <p>{{{comment}}}</p>
+            </div>
+            <object class="speech_bubble_point"
+                data="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9efb134c-4fb5-49a4-8702-6128f4b45dc6/df4hpg2-32a52c69-88e6-4119-871e-827705344ec7.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzllZmIxMzRjLTRmYjUtNDlhNC04NzAyLTYxMjhmNGI0NWRjNlwvZGY0aHBnMi0zMmE1MmM2OS04OGU2LTQxMTktODcxZS04Mjc3MDUzNDRlYzcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BNexgt8jqJDLSyEgmnSbEI21Ije7z4jYggIv-kboPig"></object>
+        </div>
+        <div class="btn btn-with-border" onclick="commentPopupHide()">Exit</div>
+    </div>
+</div>
